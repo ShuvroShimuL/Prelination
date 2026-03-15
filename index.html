@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PreliNation - Smart Exam System</title>
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
     <!-- Use the base theme css for variables, fonts, and typography -->
     <link rel="stylesheet" href="assets/css/bootstrap.css">
     <link rel="stylesheet" href="assets/css/template.css">
@@ -47,7 +49,8 @@
             <div class="col-auto logo-wrapper">
                 <a href="index.html" class="logo">
                     <!-- Placeholder Logo matching the brand style -->
-                    <h2 class="m-0" style="color: var(--e-global-color-primary); font-family: var(--wellearn-heading-font-family); font-weight: bold;">Preli<span style="color: var(--e-global-color-secondary);">Nation</span></h2>
+                    <img src="assets/images/logo.png" alt="PreliNation Logo" style="height: 40px;" class="d-none d-lg-inline-block">
+                    <img src="assets/images/logo-mobile.png" alt="PreliNation Logo" style="height: 30px;" class="d-inline-block d-lg-none">
                 </a>
             </div>
 
@@ -67,7 +70,7 @@
             <!-- CTA Buttons -->
             <div class="col-auto cta-wrapper d-flex align-items-center" style="gap: 15px;">
                 <a href="https://test-bd.info/login" class="btn btn-outline-primary login-btn d-none d-sm-inline-block">Login</a>
-                <a href="https://test-bd.info/login" class="btn btn-primary start-btn">Start Practice</a>
+                <a href="https://test-bd.info/login" class="btn btn-primary start-btn">Start Practice <img src="assets/images/arrow.png" alt="" width="16" class="ml-2" style="filter: brightness(0) invert(1);"></a>
                 <!-- Mobile Menu Toggle -->
                 <button class="mobile-menu-toggle d-lg-none" aria-label="Toggle Navigation">
                     <i class="fas fa-bars"></i>
@@ -93,9 +96,9 @@
                 <div class="trust-indicators mt-5 d-flex align-items-center justify-content-center justify-content-lg-start" style="gap: 20px;">
                     <div class="d-flex align-items-center">
                         <div class="avatar-group d-flex" style="margin-right: -10px;">
-                            <img src="https://via.placeholder.com/40" class="rounded-circle border border-white" style="width: 40px; height: 40px; margin-right: -15px;" alt="User">
-                            <img src="https://via.placeholder.com/40" class="rounded-circle border border-white" style="width: 40px; height: 40px; margin-right: -15px;" alt="User">
-                            <img src="https://via.placeholder.com/40" class="rounded-circle border border-white" style="width: 40px; height: 40px;" alt="User">
+                            <img src="assets/images/placehoder-user.jpg" class="rounded-circle border border-white" style="width: 40px; height: 40px; margin-right: -15px;" alt="User">
+                            <img src="assets/images/placehoder-user.jpg" class="rounded-circle border border-white" style="width: 40px; height: 40px; margin-right: -15px;" alt="User">
+                            <img src="assets/images/placehoder-user.jpg" class="rounded-circle border border-white" style="width: 40px; height: 40px;" alt="User">
                         </div>
                         <span class="text-muted ml-3 ml-sm-4 small"><strong>10,000+</strong><br>Students Joined</span>
                     </div>
@@ -227,7 +230,7 @@
             <div class="col-lg-6 mb-5 mb-lg-0 pe-lg-5 text-center text-lg-start">
                 <div class="about-image-wrapper position-relative d-inline-block">
                     <!-- Base About Image -->
-                    <img src="https://via.placeholder.com/500x550/f9f9fc/b0b0b0?text=Preparation+Visual" class="img-fluid rounded" style="border-radius: 20px !important; box-shadow: 0 15px 40px rgba(0,0,0,0.08);" alt="Why PreliNation">
+                    <img src="assets/images/bg-header-builder.jpg" class="img-fluid rounded" style="border-radius: 20px !important; box-shadow: 0 15px 40px rgba(0,0,0,0.08); object-fit: cover; height: 550px; width: 100%;" alt="Why PreliNation">
 
                     <!-- Decorative Element -->
                     <div class="position-absolute bg-primary rounded-circle" style="width: 100px; height: 100px; bottom: -20px; right: -20px; z-index: -1; opacity: 0.2;"></div>
@@ -443,7 +446,10 @@
             <!-- Card 1: Mobile Interface -->
             <div class="col-10 col-sm-6 col-md-4 col-lg-3 flex-shrink-0" style="min-width: 250px;">
                 <div class="gallery-card border-0 rounded overflow-hidden shadow-sm position-relative">
-                    <img src="https://via.placeholder.com/300x500/f8f9fa/ced4da?text=Mobile+Interface" class="img-fluid w-100" alt="Mobile Interface">
+                    <div class="bg-light rounded d-flex align-items-center justify-content-center flex-column text-muted" style="height: 400px; border: 2px dashed #ced4da;">
+                        <i class="fa fa-mobile fa-3x mb-2"></i>
+                        <span>Mobile Interface</span>
+                    </div>
                     <div class="overlay position-absolute p-3 text-white text-center w-100 h-100 d-flex flex-column justify-content-end" style="background: linear-gradient(0deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 50%); bottom: 0; left: 0;">
                         <h5 class="font-weight-bold m-0 text-white">Mobile Interface</h5>
                         <p class="small m-0 text-light mt-1">Study smoothly on the go</p>
@@ -454,7 +460,10 @@
             <!-- Card 2: Exam Dashboard -->
             <div class="col-10 col-sm-6 col-md-4 col-lg-3 flex-shrink-0" style="min-width: 250px;">
                 <div class="gallery-card border-0 rounded overflow-hidden shadow-sm position-relative">
-                    <img src="https://via.placeholder.com/300x500/f8f9fa/ced4da?text=Exam+Dashboard" class="img-fluid w-100" alt="Exam Dashboard">
+                    <div class="bg-light rounded d-flex align-items-center justify-content-center flex-column text-muted" style="height: 400px; border: 2px dashed #ced4da;">
+                        <i class="fa fa-desktop fa-3x mb-2"></i>
+                        <span>Exam Dashboard</span>
+                    </div>
                     <div class="overlay position-absolute p-3 text-white text-center w-100 h-100 d-flex flex-column justify-content-end" style="background: linear-gradient(0deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 50%); bottom: 0; left: 0;">
                         <h5 class="font-weight-bold m-0 text-white">Exam Dashboard</h5>
                         <p class="small m-0 text-light mt-1">Real-time simulation</p>
@@ -465,7 +474,10 @@
             <!-- Card 3: Performance Analytics -->
             <div class="col-10 col-sm-6 col-md-4 col-lg-3 flex-shrink-0" style="min-width: 250px;">
                 <div class="gallery-card border-0 rounded overflow-hidden shadow-sm position-relative">
-                    <img src="https://via.placeholder.com/300x500/f8f9fa/ced4da?text=Analytics+View" class="img-fluid w-100" alt="Performance Analytics">
+                    <div class="bg-light rounded d-flex align-items-center justify-content-center flex-column text-muted" style="height: 400px; border: 2px dashed #ced4da;">
+                        <i class="fa fa-chart-pie fa-3x mb-2"></i>
+                        <span>Analytics View</span>
+                    </div>
                     <div class="overlay position-absolute p-3 text-white text-center w-100 h-100 d-flex flex-column justify-content-end" style="background: linear-gradient(0deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 50%); bottom: 0; left: 0;">
                         <h5 class="font-weight-bold m-0 text-white">Performance Analytics</h5>
                         <p class="small m-0 text-light mt-1">Deep progress tracking</p>
@@ -476,7 +488,10 @@
             <!-- Card 4: Success Stories -->
             <div class="col-10 col-sm-6 col-md-4 col-lg-3 flex-shrink-0" style="min-width: 250px;">
                 <div class="gallery-card border-0 rounded overflow-hidden shadow-sm position-relative">
-                    <img src="https://via.placeholder.com/300x500/f8f9fa/ced4da?text=Success+Stories" class="img-fluid w-100" alt="Success Stories">
+                    <div class="bg-light rounded d-flex align-items-center justify-content-center flex-column text-muted" style="height: 400px; border: 2px dashed #ced4da;">
+                        <i class="fa fa-graduation-cap fa-3x mb-2"></i>
+                        <span>Success Stories</span>
+                    </div>
                     <div class="overlay position-absolute p-3 text-white text-center w-100 h-100 d-flex flex-column justify-content-end" style="background: linear-gradient(0deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 50%); bottom: 0; left: 0;">
                         <h5 class="font-weight-bold m-0 text-white">Success Stories</h5>
                         <p class="small m-0 text-light mt-1">Join the hall of fame</p>
@@ -487,7 +502,10 @@
             <!-- Card 5: Question-solving experience -->
             <div class="col-10 col-sm-6 col-md-4 col-lg-3 flex-shrink-0" style="min-width: 250px;">
                 <div class="gallery-card border-0 rounded overflow-hidden shadow-sm position-relative">
-                    <img src="https://via.placeholder.com/300x500/f8f9fa/ced4da?text=Live+Test" class="img-fluid w-100" alt="Question-solving experience">
+                    <div class="bg-light rounded d-flex align-items-center justify-content-center flex-column text-muted" style="height: 400px; border: 2px dashed #ced4da;">
+                        <i class="fa fa-clipboard-check fa-3x mb-2"></i>
+                        <span>Live Test</span>
+                    </div>
                     <div class="overlay position-absolute p-3 text-white text-center w-100 h-100 d-flex flex-column justify-content-end" style="background: linear-gradient(0deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 50%); bottom: 0; left: 0;">
                         <h5 class="font-weight-bold m-0 text-white">Live Testing</h5>
                         <p class="small m-0 text-light mt-1">Interactive Q&A modules</p>
@@ -524,10 +542,13 @@
                         <div class="testimonial-slide flex-shrink-0 w-100 px-3">
                             <div class="card border-0 bg-white p-5 rounded-lg shadow-sm text-center mx-auto" style="max-width: 800px; border-radius: 20px;">
                                 <i class="fas fa-quote-left fa-3x mb-4 opacity-10" style="color: var(--e-global-color-primary); opacity: 0.1;"></i>
+                                <div class="mb-3 d-flex justify-content-center">
+                                    <img src="assets/images/rating-active.png" alt="Star" width="16"><img src="assets/images/rating-active.png" alt="Star" width="16"><img src="assets/images/rating-active.png" alt="Star" width="16"><img src="assets/images/rating-active.png" alt="Star" width="16"><img src="assets/images/rating-active.png" alt="Star" width="16">
+                                </div>
                                 <p class="lead text-muted mb-4 font-italic" style="font-size: 1.2rem; line-height: 1.8;">"PreliNation completely transformed my preparation strategy. The detailed analytics showed me exactly where I was losing marks, and the question sets are remarkably similar to the actual BCS preliminary exams."</p>
                                 <div class="student-info d-flex flex-column align-items-center justify-content-center">
-                                    <img src="https://via.placeholder.com/60" class="rounded-circle mb-3 border border-3 border-white shadow-sm" alt="Student 1" style="width: 60px; height: 60px;">
-                                    <h5 class="font-weight-bold mb-1" style="color: var(--e-global-color-accent);">Rahim Uddin</h5>
+                                    <img src="assets/images/placehoder-user.jpg" class="rounded-circle mb-3 border border-3 border-white shadow-sm" alt="Student 1" style="width: 60px; height: 60px; object-fit: cover;">
+                                    <h5 class="font-weight-bold mb-1 mt-2" style="color: var(--e-global-color-text);">Rahim Uddin</h5>
                                     <span class="text-secondary small font-weight-bold text-uppercase" style="letter-spacing: 1px;">BCS Candidate</span>
                                 </div>
                             </div>
@@ -537,10 +558,13 @@
                         <div class="testimonial-slide flex-shrink-0 w-100 px-3">
                             <div class="card border-0 bg-white p-5 rounded-lg shadow-sm text-center mx-auto" style="max-width: 800px; border-radius: 20px;">
                                 <i class="fas fa-quote-left fa-3x mb-4 opacity-10" style="color: var(--e-global-color-primary); opacity: 0.1;"></i>
+                                <div class="mb-3 d-flex justify-content-center">
+                                    <img src="assets/images/rating-active.png" alt="Star" width="16"><img src="assets/images/rating-active.png" alt="Star" width="16"><img src="assets/images/rating-active.png" alt="Star" width="16"><img src="assets/images/rating-active.png" alt="Star" width="16"><img src="assets/images/rating-active.png" alt="Star" width="16">
+                                </div>
                                 <p class="lead text-muted mb-4 font-italic" style="font-size: 1.2rem; line-height: 1.8;">"I used to solve questions from random books, but the structured PDF reports and real-time competitive ranking on PreliNation gave me the push I needed. Highly recommended for any serious job seeker."</p>
                                 <div class="student-info d-flex flex-column align-items-center justify-content-center">
-                                    <img src="https://via.placeholder.com/60" class="rounded-circle mb-3 border border-3 border-white shadow-sm" alt="Student 2" style="width: 60px; height: 60px;">
-                                    <h5 class="font-weight-bold mb-1" style="color: var(--e-global-color-accent);">Sadia Islam</h5>
+                                    <img src="assets/images/placehoder-user.jpg" class="rounded-circle mb-3 border border-3 border-white shadow-sm" alt="Student 2" style="width: 60px; height: 60px; object-fit: cover;">
+                                    <h5 class="font-weight-bold mb-1 mt-2" style="color: var(--e-global-color-text);">Sadia Islam</h5>
                                     <span class="text-secondary small font-weight-bold text-uppercase" style="letter-spacing: 1px;">Bank Job Aspirant</span>
                                 </div>
                             </div>
@@ -550,10 +574,13 @@
                         <div class="testimonial-slide flex-shrink-0 w-100 px-3">
                             <div class="card border-0 bg-white p-5 rounded-lg shadow-sm text-center mx-auto" style="max-width: 800px; border-radius: 20px;">
                                 <i class="fas fa-quote-left fa-3x mb-4 opacity-10" style="color: var(--e-global-color-primary); opacity: 0.1;"></i>
+                                <div class="mb-3 d-flex justify-content-center">
+                                    <img src="assets/images/rating-active.png" alt="Star" width="16"><img src="assets/images/rating-active.png" alt="Star" width="16"><img src="assets/images/rating-active.png" alt="Star" width="16"><img src="assets/images/rating-active.png" alt="Star" width="16"><img src="assets/images/rating-active.png" alt="Star" width="16">
+                                </div>
                                 <p class="lead text-muted mb-4 font-italic" style="font-size: 1.2rem; line-height: 1.8;">"The mobile interface is incredibly smooth. I can take model tests during my commute. The explanations provided after each test are clear, concise, and straight to the point. It's truly a smart system."</p>
                                 <div class="student-info d-flex flex-column align-items-center justify-content-center">
-                                    <img src="https://via.placeholder.com/60" class="rounded-circle mb-3 border border-3 border-white shadow-sm" alt="Student 3" style="width: 60px; height: 60px;">
-                                    <h5 class="font-weight-bold mb-1" style="color: var(--e-global-color-accent);">Kamrul Hasan</h5>
+                                    <img src="assets/images/placehoder-user.jpg" class="rounded-circle mb-3 border border-3 border-white shadow-sm" alt="Student 3" style="width: 60px; height: 60px; object-fit: cover;">
+                                    <h5 class="font-weight-bold mb-1 mt-2" style="color: var(--e-global-color-text);">Kamrul Hasan</h5>
                                     <span class="text-secondary small font-weight-bold text-uppercase" style="letter-spacing: 1px;">Primary Teacher Candidate</span>
                                 </div>
                             </div>
@@ -689,7 +716,7 @@
 </section>
 
 <!-- Contact & Support Section -->
-<section id="contact" class="contact-section py-5 text-center" style="background: linear-gradient(135deg, var(--e-global-color-accent) 0%, #1a1e29 100%); color: white; padding-top: 80px; padding-bottom: 80px;">
+<section id="contact" class="contact-section py-5 text-center" style="background: linear-gradient(rgba(26,30,41,0.85), rgba(26,30,41,0.95)), url('assets/images/bg-header-builder.jpg'); background-size: cover; background-position: center; background-attachment: fixed; color: white; padding-top: 80px; padding-bottom: 80px;">
     <div class="container">
         <!-- Section Header -->
         <div class="row justify-content-center mb-5">
@@ -741,7 +768,8 @@
             <!-- Brand Column -->
             <div class="col-lg-4 col-md-6 mb-4 mb-lg-0 pr-lg-5">
                 <a href="index.html" class="logo d-inline-block mb-3">
-                    <h2 class="m-0" style="color: var(--e-global-color-primary); font-family: var(--wellearn-heading-font-family); font-weight: bold;">Preli<span style="color: var(--e-global-color-secondary);">Nation</span></h2>
+                    <img src="assets/images/logo.png" alt="PreliNation Logo" style="height: 40px;" class="d-none d-lg-inline-block">
+                    <img src="assets/images/logo-mobile.png" alt="PreliNation Logo" style="height: 30px;" class="d-inline-block d-lg-none">
                 </a>
                 <p class="text-muted mb-4 small" style="line-height: 1.8;">
                     The most advanced job preparation and model test platform in Bangladesh. Start practicing today to secure your future.
@@ -801,7 +829,7 @@
         <!-- Copyright -->
         <div class="row pt-4 mt-4 border-top">
             <div class="col-md-6 text-center text-md-start">
-                <p class="text-muted small m-0">&copy; <span id="current-year"></span> PreliNation. All rights reserved.</p>
+                <p class="text-muted small m-0">&copy; <span id="current-year"></span> <br>All rights reserved.</p>
             </div>
             <div class="col-md-6 text-center text-md-end mt-2 mt-md-0">
                 <p class="text-muted small m-0">Designed for success</p>
