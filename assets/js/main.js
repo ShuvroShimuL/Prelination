@@ -165,4 +165,50 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // 7. Notice Ticker Animation
+    const noticeTicker = document.querySelector('.notice-ticker');
+    if (noticeTicker) {
+        let position = 0;
+        let animationFrameId;
+
+        const animateTicker = () => {
+            position -= 1;
+            if (position < -noticeTicker.scrollWidth / 2) {
+                position = 0; // Reset smoothly
+            }
+            noticeTicker.style.transform = `translateX(${position}px)`;
+            animationFrameId = requestAnimationFrame(animateTicker);
+        };
+        animationFrameId = requestAnimationFrame(animateTicker);
+        
+        // Pause on hover
+        noticeTicker.addEventListener('mouseenter', () => cancelAnimationFrame(animationFrameId));
+        noticeTicker.addEventListener('mouseleave', () => {
+            animationFrameId = requestAnimationFrame(animateTicker);
+        });
+    }
+
+    // 8. Gallery Slider
+    const galleryTrack = document.querySelector('.gallery-track');
+    if (galleryTrack) {
+        // Simple auto-scroll for gallery
+        let galleryPos = 0;
+        let galleryAnimationId;
+        
+        const animateGallery = () => {
+            galleryPos -= 0.5;
+            if (galleryPos < -(galleryTrack.scrollWidth / 2)) {
+                galleryPos = 0;
+            }
+            galleryTrack.style.transform = `translateX(${galleryPos}px)`;
+            galleryAnimationId = requestAnimationFrame(animateGallery);
+        };
+        galleryAnimationId = requestAnimationFrame(animateGallery);
+
+        galleryTrack.addEventListener('mouseenter', () => cancelAnimationFrame(galleryAnimationId));
+        galleryTrack.addEventListener('mouseleave', () => {
+            galleryAnimationId = requestAnimationFrame(animateGallery);
+        });
+    }
+
 });
