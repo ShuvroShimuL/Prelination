@@ -1,0 +1,445 @@
+/* ==========================================================================
+   PreliNation Custom Styles
+   Leverages base CSS variables from wellearn theme
+   ========================================================================== */
+
+/* Global Settings */
+body {
+    font-family: var(--wellearn-font-sans-serif, 'gilmer', sans-serif);
+    color: var(--e-global-color-text);
+    overflow-x: hidden;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--wellearn-heading-font-family, 'gilmer', sans-serif);
+    color: var(--e-global-color-accent);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+h1 { font-size: 3.5rem; letter-spacing: -1px; }
+h2 { font-size: 2.75rem; letter-spacing: -0.5px; }
+h3 { font-size: 2rem; }
+h4 { font-size: 1.5rem; }
+
+p {
+    font-size: 1.125rem;
+    color: #555;
+}
+
+.section-label {
+    display: inline-block;
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--e-global-color-primary);
+    background: rgba(0, 123, 255, 0.1);
+    padding: 0.5rem 1.25rem;
+    border-radius: 50px;
+    margin-bottom: 1rem;
+}
+
+.subheadline {
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+a {
+    color: var(--e-global-color-primary);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: var(--e-global-color-secondary);
+    text-decoration: none;
+}
+
+/* Notice Ticker */
+.notice-ticker {
+    background-color: var(--e-global-color-secondary);
+    color: #fff;
+    padding: 8px 0;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    position: relative;
+    z-index: 1000;
+    width: 100%;
+    overflow: hidden;
+}
+
+.notice-ticker p {
+    margin: 0;
+    display: inline-block;
+    white-space: nowrap;
+    animation: ticker 25s linear infinite;
+}
+
+.notice-ticker a {
+    color: #fff;
+    text-decoration: underline;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+@keyframes ticker {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+/* Header & Navigation */
+.wellearn-header {
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    padding: 15px 0;
+}
+
+.main-menu ul li a {
+    color: var(--e-global-color-accent);
+    font-weight: 600;
+    font-size: 16px;
+    position: relative;
+    padding: 5px 0;
+}
+
+.main-menu ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--e-global-color-primary);
+    transition: width 0.3s ease;
+}
+
+.main-menu ul li a:hover::after,
+.main-menu ul li a.active::after {
+    width: 100%;
+}
+
+.main-menu ul li a:hover,
+.main-menu ul li a.active {
+    color: var(--e-global-color-primary);
+}
+
+/* Buttons */
+.btn {
+    font-family: var(--wellearn-heading-font-family, 'gilmer', sans-serif);
+    font-weight: 600;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--e-global-color-primary);
+    border-color: var(--e-global-color-primary);
+}
+
+.btn-primary:hover {
+    background-color: var(--e-global-color-secondary);
+    border-color: var(--e-global-color-secondary);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(2, 196, 126, 0.3);
+}
+
+.btn-outline-primary {
+    color: var(--e-global-color-primary);
+    border-color: var(--e-global-color-primary);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--e-global-color-primary);
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(38, 130, 249, 0.3);
+}
+
+/* Hero Section */
+.hero-section {
+    min-height: 80vh;
+}
+
+.avatar-group img {
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.avatar-group img:hover {
+    transform: translateY(-3px);
+    z-index: 10;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+
+/* Stats Section */
+.stats-section {
+    z-index: 10;
+}
+
+.stat-item {
+    transition: transform 0.3s ease;
+}
+
+.stat-item:hover {
+    transform: translateY(-5px);
+}
+
+/* Feature Grid */
+.hover-shadow:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1) !important;
+}
+
+/* Services / Analytics */
+.service-block {
+    background: #fff;
+}
+
+.service-block:hover {
+    border-color: var(--e-global-color-primary) !important;
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(38, 130, 249, 0.1) !important;
+}
+
+/* Visual Experience Gallery */
+.gallery-section {
+    overflow: hidden;
+}
+
+.gallery-card {
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+}
+
+.gallery-card:hover {
+    transform: scale(1.03);
+    z-index: 10;
+}
+
+.gallery-card .overlay {
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-card:hover .overlay {
+    opacity: 1;
+}
+
+/* Testimonials Slider */
+.testimonial-slider-container {
+    cursor: grab;
+}
+
+.testimonial-slider-container:active {
+    cursor: grabbing;
+}
+
+.ts-prev, .ts-next {
+    transition: all 0.3s ease;
+}
+
+.ts-prev:hover, .ts-next:hover {
+    background-color: var(--e-global-color-secondary);
+    border-color: var(--e-global-color-secondary);
+    transform: scale(1.1);
+}
+
+/* Pricing Section */
+.transform-scale {
+    transform: scale(1.05);
+}
+
+@media (max-width: 991px) {
+    .transform-scale {
+        transform: scale(1);
+    }
+}
+
+.pricing-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pricing-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1) !important;
+}
+
+.pricing-card.transform-scale:hover {
+    transform: scale(1.05) translateY(-5px);
+}
+
+/* Footer Links */
+.footer-links li a:hover {
+    color: var(--e-global-color-primary) !important;
+    padding-left: 5px;
+}
+
+/* Mobile Menu Adjustments */
+@media (max-width: 991px) {
+    .nav-wrapper {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        padding: 20px;
+        box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+        display: none; /* hidden by default on mobile */
+    }
+
+    .nav-wrapper.active {
+        display: block !important;
+    }
+
+    .main-menu ul {
+        flex-direction: column;
+        align-items: flex-start !important;
+        gap: 15px !important;
+    }
+
+    .mobile-menu-toggle {
+        background: transparent;
+        border: none;
+        color: var(--e-global-color-accent);
+        font-size: 24px;
+        cursor: pointer;
+        outline: none;
+    }
+}
+
+/* Visual Depth & Glassmorphism */
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+    border-radius: 1rem;
+}
+
+.floating-badge {
+    position: absolute;
+    background: #fff;
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    animation: float 6s ease-in-out infinite;
+}
+
+.floating-badge.badge-top-left { top: -20px; left: -20px; }
+.floating-badge.badge-bottom-right { bottom: -20px; right: -20px; animation-delay: 1.5s; }
+.floating-badge.badge-mid-right { top: 40%; right: -40px; animation-delay: 3s; }
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+
+.depth-layer {
+    position: relative;
+    z-index: 1;
+}
+
+.depth-layer::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120%;
+    height: 120%;
+    background: radial-gradient(circle, rgba(var(--e-global-color-primary-rgb, 0,123,255), 0.05) 0%, rgba(255,255,255,0) 70%);
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* Updated Feature Card Depth */
+.hover-shadow {
+    transition: all 0.4s ease;
+    border: 1px solid rgba(0,0,0,0.05);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+}
+
+.hover-shadow:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08) !important;
+    border-color: rgba(var(--e-global-color-primary-rgb, 0,123,255), 0.2);
+}
+/* Support Buttons Upgrade */
+.support-buttons-wrap {
+    gap: 20px !important;
+}
+
+.support-btn {
+    border-radius: 12px !important;
+    padding: 15px 30px !important;
+    font-weight: 700 !important;
+    font-size: 1rem !important;
+    min-width: 200px !important;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    border: none !important;
+}
+
+.support-btn i {
+    font-size: 1.5rem !important;
+    margin-right: 15px !important;
+    transition: transform 0.3s ease;
+}
+
+.support-btn::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(255,255,255,0.1);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.support-btn:hover {
+    transform: translateY(-8px) scale(1.02) !important;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3) !important;
+    color: white !important;
+}
+
+.support-btn:hover i {
+    transform: scale(1.2) rotate(-10deg);
+}
+
+.support-btn:hover::before {
+    opacity: 1;
+}
+
+/* Individual Brand Colors with gradients for premium look */
+.whatsapp-btn { background: linear-gradient(135deg, #25D366 0%, #128C7E 100%) !important; }
+.messenger-btn { background: linear-gradient(135deg, #0084FF 0%, #0066CC 100%) !important; }
+.phone-btn { background: linear-gradient(135deg, var(--e-global-color-primary) 0%, #0056b3 100%) !important; }
+.fb-page-btn { background: linear-gradient(135deg, #1877F2 0%, #1052ab 100%) !important; }
+.fb-group-btn { background: linear-gradient(135deg, #3b5998 0%, #2d4373 100%) !important; }
