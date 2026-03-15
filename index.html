@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Custom styling to ensure layout looks like a modern SaaS -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
 
@@ -27,6 +29,15 @@
 
     <!-- Custom Interactivity -->
     <script src="assets/js/main.js"></script>
+    <!-- AOS Animation JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+    </script>
 </body>
 </html>
 <header class="main-header site-header wellearn-header">
@@ -70,7 +81,7 @@
 <section id="home" class="hero-section text-center text-lg-start d-flex align-items-center position-relative" style="padding: 120px 0 80px 0; background: linear-gradient(180deg, rgba(38, 130, 249, 0.05) 0%, rgba(255, 255, 255, 0) 100%); overflow: hidden;">
     <div class="container position-relative z-index-1">
         <div class="row align-items-center">
-            <div class="col-lg-6 hero-content-wrap mb-5 mb-lg-0">
+            <div class="col-lg-6 hero-content-wrap mb-5 mb-lg-0" data-aos="fade-right" data-aos-delay="100">
                 <span class="badge badge-pill badge-primary mb-3" style="background: rgba(38, 130, 249, 0.1); color: var(--e-global-color-primary); font-weight: 600; padding: 10px 20px;">The #1 Smart Exam System</span>
                 <h1 class="hero-headline display-4 font-weight-bold mb-4" style="color: var(--e-global-color-accent); line-height: 1.2;">Master Your Exams with <span style="color: var(--e-global-color-primary);">PreliNation's</span> Advanced Analytics</h1>
                 <p class="hero-subheadline lead mb-4 text-muted" style="max-width: 500px; line-height: 1.6;">Experience the most robust, high-conversion practice platform in Bangladesh. Unique questions, deep performance insights, and smart preparation—all in one place.</p>
@@ -96,32 +107,70 @@
                 </div>
             </div>
 
-            <div class="col-lg-6 position-relative hero-image-wrap text-center">
+            <div class="col-lg-6 position-relative hero-image-wrap text-center" data-aos="fade-left" data-aos-delay="300">
                 <!-- Decorative Elements -->
                 <div class="hero-blob position-absolute" style="top: -50px; right: -50px; width: 400px; height: 400px; background: rgba(2, 196, 126, 0.1); border-radius: 50%; z-index: -1; filter: blur(50px);"></div>
                 <div class="hero-blob-2 position-absolute" style="bottom: -50px; left: -50px; width: 300px; height: 300px; background: rgba(38, 130, 249, 0.1); border-radius: 50%; z-index: -1; filter: blur(50px);"></div>
-                <!-- Placeholder Hero Image representing a Dashboard/App -->
-                <img src="https://via.placeholder.com/600x450/f4f5f7/cccccc?text=Dashboard+Interface" class="img-fluid rounded shadow-lg" alt="PreliNation Platform Dashboard" style="border: 1px solid rgba(0,0,0,0.05);">
-
-                <!-- Floating Card 1 -->
-                <div class="floating-card position-absolute bg-white p-3 rounded shadow" style="top: 10%; right: -20px; animation: float 6s ease-in-out infinite;">
-                    <div class="d-flex align-items-center gap-2">
-                        <div class="icon-wrap bg-success text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;"><i class="fas fa-check"></i></div>
-                        <div>
-                            <p class="m-0 font-weight-bold text-dark" style="font-size: 14px;">Accuracy</p>
-                            <p class="m-0 text-muted" style="font-size: 12px;">+15% improved</p>
+                
+                <!-- Interactive Dashboard Mockup -->
+                <div class="dashboard-mockup glass-card position-relative p-4 depth-layer" style="width: 100%; max-width: 600px; height: 450px; background: rgba(255, 255, 255, 0.9); border-radius: 20px; box-shadow: 0 25px 50px rgba(0,0,0,0.1); border: 1px solid rgba(255,255,255,0.8); overflow: hidden; margin: 0 auto;">
+                    <div class="d-flex justify-content-between align-items-center border-bottom pb-3 mb-4">
+                        <div class="d-flex align-items-center gap-3">
+                            <div style="width: 40px; height: 40px; border-radius: 8px; background: rgba(0,123,255, 0.1); display: flex; align-items: center; justify-content: center; color: #007bff;"><i class="fas fa-chart-pie"></i></div>
+                            <div>
+                                <h6 class="m-0 font-weight-bold" style="font-size: 16px;">Performance Overview</h6>
+                                <small class="text-muted" style="font-size: 12px;">Last 30 Days Activity</small>
+                            </div>
+                        </div>
+                        <div class="d-flex gap-2">
+                            <span class="badge bg-success-subtle text-success px-3 py-2 rounded-pill" style="font-size: 12px; background: #e8f5e9; color: #2e7d32;"><i class="fas fa-arrow-up mr-1"></i> 12%</span>
+                        </div>
+                    </div>
+                    <div class="row g-3">
+                        <div class="col-6">
+                            <div class="p-3 rounded" style="background: #f8f9fa; border: 1px solid #eee;">
+                                <small class="text-muted d-block mb-1">Exams Taken</small>
+                                <h4 class="m-0 font-weight-bold" style="color: #333;">124</h4>
+                                <div class="mt-2" style="height: 4px; width: 100%; background: #e9ecef; border-radius: 2px;"><div style="height: 100%; width: 75%; background: #007bff; border-radius: 2px;"></div></div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="p-3 rounded" style="background: #f8f9fa; border: 1px solid #eee;">
+                                <small class="text-muted d-block mb-1">Avg Score</small>
+                                <h4 class="m-0 font-weight-bold" style="color: #333;">82%</h4>
+                                <div class="mt-2" style="height: 4px; width: 100%; background: #e9ecef; border-radius: 2px;"><div style="height: 100%; width: 82%; background: #28a745; border-radius: 2px;"></div></div>
+                            </div>
+                        </div>
+                        <div class="col-12 mt-3">
+                            <div class="p-3 rounded" style="background: #f8f9fa; border: 1px solid #eee; height: 160px; position: relative;">
+                                <small class="text-muted d-block mb-3">Recent Results</small>
+                                <div class="d-flex align-items-end justify-content-between px-2" style="height: 100px; gap: 8px;">
+                                    <div style="width: 12%; height: 40%; background: #e9ecef; border-radius: 4px 4px 0 0;"></div>
+                                    <div style="width: 12%; height: 60%; background: #e9ecef; border-radius: 4px 4px 0 0;"></div>
+                                    <div style="width: 12%; height: 30%; background: #e9ecef; border-radius: 4px 4px 0 0;"></div>
+                                    <div style="width: 12%; height: 80%; background: rgba(0,123,255, 0.8); border-radius: 4px 4px 0 0;"></div>
+                                    <div style="width: 12%; height: 50%; background: #e9ecef; border-radius: 4px 4px 0 0;"></div>
+                                    <div style="width: 12%; height: 90%; background: #007bff; border-radius: 4px 4px 0 0; position: relative;"><div style="position: absolute; top: -25px; left: 50%; transform: translateX(-50%); background: #333; color: #fff; font-size: 10px; padding: 2px 6px; border-radius: 4px;">95%</div></div>
+                                    <div style="width: 12%; height: 75%; background: #e9ecef; border-radius: 4px 4px 0 0;"></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-
-                <!-- Floating Card 2 -->
-                <div class="floating-card position-absolute bg-white p-3 rounded shadow" style="bottom: 15%; left: -20px; animation: float 5s ease-in-out infinite alternate;">
-                    <div class="d-flex align-items-center gap-2">
-                        <div class="icon-wrap bg-primary text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;"><i class="fas fa-chart-line"></i></div>
-                        <div>
-                            <p class="m-0 font-weight-bold text-dark" style="font-size: 14px;">Detailed Analytics</p>
-                            <p class="m-0 text-muted" style="font-size: 12px;">Generated instantly</p>
-                        </div>
+                <!-- Floating Badge Top Left -->
+                <div class="floating-badge badge-top-left">
+                    <div class="icon-wrap bg-success text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;"><i class="fas fa-check"></i></div>
+                    <div>
+                        <p class="m-0 font-weight-bold text-dark" style="font-size: 14px;">Accuracy</p>
+                        <p class="m-0 text-muted" style="font-size: 12px;">+15% improved</p>
+                    </div>
+                </div>
+                <!-- Floating Badge Mid Right -->
+                <div class="floating-badge badge-mid-right">
+                    <div class="icon-wrap bg-primary text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;"><i class="fas fa-trophy"></i></div>
+                    <div>
+                        <p class="m-0 font-weight-bold text-dark" style="font-size: 14px;">Rank #12</p>
+                        <p class="m-0 text-muted" style="font-size: 12px;">National Board</p>
                     </div>
                 </div>
             </div>
@@ -133,7 +182,7 @@
 <section id="stats" class="stats-section bg-primary text-white py-5 position-relative" style="margin-top: -30px; border-radius: 12px; margin-left: 15px; margin-right: 15px; box-shadow: 0 10px 30px rgba(38, 130, 249, 0.2);">
     <div class="container">
         <div class="row text-center justify-content-center g-4">
-            <div class="col-6 col-md-3 stat-item">
+            <div class="col-6 col-md-3 stat-item" data-aos="fade-up" data-aos-delay="400" data-aos="fade-up" data-aos-delay="300" data-aos="fade-up" data-aos-delay="200" data-aos="fade-up" data-aos-delay="100">
                 <div class="stat-icon mb-3">
                     <i class="fas fa-layer-group fa-3x" style="color: rgba(255, 255, 255, 0.8);"></i>
                 </div>
@@ -245,7 +294,7 @@
         <!-- Grid Items -->
         <div class="row g-4 mt-3">
             <!-- Feature 1 -->
-            <div class="col-md-6 col-lg-4 mb-4">
+            <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100" data-aos="fade-up" data-aos-delay="200" data-aos="fade-up" data-aos-delay="300">
                 <div class="feature-card card h-100 border-0 shadow-sm hover-shadow transition" style="border-radius: 12px; transition: transform 0.3s ease, box-shadow 0.3s ease; padding: 40px 30px;">
                     <div class="icon-wrapper mb-4 text-primary bg-primary bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center" style="width: 70px; height: 70px; background: rgba(38, 130, 249, 0.1);">
                         <i class="fas fa-database fa-2x" style="color: var(--e-global-color-primary);"></i>
@@ -256,7 +305,7 @@
             </div>
 
             <!-- Feature 2 -->
-            <div class="col-md-6 col-lg-4 mb-4">
+            <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100" data-aos="fade-up" data-aos-delay="200" data-aos="fade-up" data-aos-delay="300">
                 <div class="feature-card card h-100 border-0 shadow-sm hover-shadow transition" style="border-radius: 12px; transition: transform 0.3s ease, box-shadow 0.3s ease; padding: 40px 30px;">
                     <div class="icon-wrapper mb-4 text-secondary bg-secondary bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center" style="width: 70px; height: 70px; background: rgba(2, 196, 126, 0.1);">
                         <i class="fas fa-laptop-code fa-2x" style="color: var(--e-global-color-secondary);"></i>
@@ -267,7 +316,7 @@
             </div>
 
             <!-- Feature 3 -->
-            <div class="col-md-6 col-lg-4 mb-4">
+            <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100" data-aos="fade-up" data-aos-delay="200" data-aos="fade-up" data-aos-delay="300">
                 <div class="feature-card card h-100 border-0 shadow-sm hover-shadow transition" style="border-radius: 12px; transition: transform 0.3s ease, box-shadow 0.3s ease; padding: 40px 30px;">
                     <div class="icon-wrapper mb-4 text-warning bg-warning bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center" style="width: 70px; height: 70px; background: rgba(255, 193, 7, 0.1);">
                         <i class="fas fa-chart-pie fa-2x" style="color: #ffc107;"></i>
@@ -278,7 +327,7 @@
             </div>
 
             <!-- Feature 4 -->
-            <div class="col-md-6 col-lg-4 mb-4">
+            <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100" data-aos="fade-up" data-aos-delay="200" data-aos="fade-up" data-aos-delay="300">
                 <div class="feature-card card h-100 border-0 shadow-sm hover-shadow transition" style="border-radius: 12px; transition: transform 0.3s ease, box-shadow 0.3s ease; padding: 40px 30px;">
                     <div class="icon-wrapper mb-4 text-info bg-info bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center" style="width: 70px; height: 70px; background: rgba(23, 162, 184, 0.1);">
                         <i class="fas fa-search-plus fa-2x" style="color: #17a2b8;"></i>
@@ -289,7 +338,7 @@
             </div>
 
             <!-- Feature 5 -->
-            <div class="col-md-6 col-lg-4 mb-4">
+            <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100" data-aos="fade-up" data-aos-delay="200" data-aos="fade-up" data-aos-delay="300">
                 <div class="feature-card card h-100 border-0 shadow-sm hover-shadow transition" style="border-radius: 12px; transition: transform 0.3s ease, box-shadow 0.3s ease; padding: 40px 30px;">
                     <div class="icon-wrapper mb-4 text-danger bg-danger bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center" style="width: 70px; height: 70px; background: rgba(220, 53, 69, 0.1);">
                         <i class="fas fa-file-pdf fa-2x" style="color: #dc3545;"></i>
@@ -300,7 +349,7 @@
             </div>
 
             <!-- Feature 6 -->
-            <div class="col-md-6 col-lg-4 mb-4">
+            <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100" data-aos="fade-up" data-aos-delay="200" data-aos="fade-up" data-aos-delay="300">
                 <div class="feature-card card h-100 border-0 shadow-sm hover-shadow transition" style="border-radius: 12px; transition: transform 0.3s ease, box-shadow 0.3s ease; padding: 40px 30px;">
                     <div class="icon-wrapper mb-4 text-success bg-success bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center" style="width: 70px; height: 70px; background: rgba(40, 167, 69, 0.1);">
                         <i class="fas fa-mobile-alt fa-2x" style="color: #28a745;"></i>
@@ -653,33 +702,31 @@
         <!-- Action Buttons Grid -->
         <div class="row justify-content-center">
             <div class="col-lg-10">
-                <div class="d-flex flex-wrap justify-content-center gap-3 support-buttons-wrap" style="gap: 15px;">
-
+                <div class="d-flex flex-wrap justify-content-center support-buttons-wrap">
                     <!-- WhatsApp -->
-                    <a href="#" class="btn support-btn whatsapp-btn d-flex align-items-center justify-content-center shadow-sm" style="background: #25D366; color: white; border-radius: 50px; padding: 12px 25px; font-weight: 600; min-width: 160px; transition: transform 0.2s;">
-                        <i class="fab fa-whatsapp fa-lg mr-2" style="margin-right: 8px;"></i> WhatsApp
+                    <a href="#" class="btn support-btn whatsapp-btn shadow-sm" data-aos="fade-up" data-aos-delay="100">
+                        <i class="fab fa-whatsapp"></i> WhatsApp
                     </a>
 
                     <!-- Messenger -->
-                    <a href="#" class="btn support-btn messenger-btn d-flex align-items-center justify-content-center shadow-sm" style="background: #0084FF; color: white; border-radius: 50px; padding: 12px 25px; font-weight: 600; min-width: 160px; transition: transform 0.2s;">
-                        <i class="fab fa-facebook-messenger fa-lg mr-2" style="margin-right: 8px;"></i> Messenger
+                    <a href="#" class="btn support-btn messenger-btn shadow-sm" data-aos="fade-up" data-aos-delay="200">
+                        <i class="fab fa-facebook-messenger"></i> Messenger
                     </a>
 
                     <!-- Phone -->
-                    <a href="tel:+880123456789" class="btn support-btn phone-btn d-flex align-items-center justify-content-center shadow-sm" style="background: var(--e-global-color-primary); color: white; border-radius: 50px; padding: 12px 25px; font-weight: 600; min-width: 160px; transition: transform 0.2s;">
-                        <i class="fas fa-phone-alt fa-lg mr-2" style="margin-right: 8px;"></i> Phone Support
+                    <a href="tel:+880123456789" class="btn support-btn phone-btn shadow-sm" data-aos="fade-up" data-aos-delay="300">
+                        <i class="fas fa-phone-alt"></i> Phone Support
                     </a>
 
                     <!-- Facebook Page -->
-                    <a href="#" class="btn support-btn fb-page-btn d-flex align-items-center justify-content-center shadow-sm" style="background: #1877F2; color: white; border-radius: 50px; padding: 12px 25px; font-weight: 600; min-width: 160px; transition: transform 0.2s;">
-                        <i class="fab fa-facebook-square fa-lg mr-2" style="margin-right: 8px;"></i> FB Page
+                    <a href="#" class="btn support-btn fb-page-btn shadow-sm" data-aos="fade-up" data-aos-delay="400">
+                        <i class="fab fa-facebook-square"></i> FB Page
                     </a>
 
                     <!-- Facebook Group -->
-                    <a href="#" class="btn support-btn fb-group-btn d-flex align-items-center justify-content-center shadow-sm" style="background: #3b5998; color: white; border-radius: 50px; padding: 12px 25px; font-weight: 600; min-width: 160px; transition: transform 0.2s;">
-                        <i class="fas fa-users fa-lg mr-2" style="margin-right: 8px;"></i> Study Group
+                    <a href="#" class="btn support-btn fb-group-btn shadow-sm" data-aos="fade-up" data-aos-delay="500">
+                        <i class="fas fa-users"></i> Study Group
                     </a>
-
                 </div>
             </div>
         </div>
